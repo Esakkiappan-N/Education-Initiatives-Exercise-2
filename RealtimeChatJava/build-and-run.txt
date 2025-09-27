@@ -1,0 +1,15 @@
+# compile
+javac -d out src/server/transport/*.java src/server/*.java src/client/*.java
+
+# run server
+java -cp out server.ChatServer 9000
+
+# run client (in another terminal)
+java -cp out client.ChatClient localhost 9000
+
+# Usage (after connecting):
+/join Room123 Alice
+Hello everyone!
+/users
+/pm Bob Hi Bob!
+/leave
